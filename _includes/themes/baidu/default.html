@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!--STATUS OK-->
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {% if page.title %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    {% if site.kewords %}<meta name="keywords" content="{{site.kewords}}">{% endif %}
+    {% if site.description %}<meta name="description" content="{{site.description}}">{% endif %}
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/pygments.css" type="text/css" />
+
+    <!--[if IE]>
+      <script type="text/javascript">
+        (function() {
+          var a = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+          b = a.length;
+          while (b--) document.createElement(a[b])
+        })();
+      </script>
+    <![endif]-->
+
+    <!--[if (lt IE 8.0)]>
+      <link href="http://hi.bdimg.com/static/qbase/css/qbase.css?v=215fffd7.css"
+      type=text/css rel=stylesheet>
+    <![endif]-->
+    <!--[if (!IE)|(gte IE 8.0)]><!-->
+      <link href="http://hi.bdimg.com/static/qbase/css/qbase_datauri.css?v=e77db79b.css"
+      type="text/css" rel="stylesheet">
+    <!--<![endif]-->
+    <!--[if (lt IE 8.0)]>
+      <link rel=stylesheet type=text/css href="http://hi.bdimg.com/static/qcomment/css/qcomment.css?v=5ba753ab.css">
+    <![endif]-->
+    <!--[if (!IE)|(gte IE 8.0)]><!-->
+      <link rel="stylesheet" type="text/css" href="http://hi.bdimg.com/static/qcomment/css/qcomment_datauri.css?v=a90beb01.css">
+    <!--<![endif]-->
+    <!--[if (lt IE 8.0)]>
+      <link rel=stylesheet href="http://hi.bdimg.com/static/qhome/css/home/20000/1.home.css?v=f6f0abba.css">
+    <![endif]-->
+    <!--[if (!IE)|(gte IE 8.0)]><!-->
+      <link rel="stylesheet" href="http://hi.bdimg.com/static/qhome/css/home/20000/1.home_datauri.css?v=4ca2ce0d.css">
+    <!--<![endif]-->
+    <style type="text/css">
+    </style>
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/css/default.css" type="text/css" />
+    
+    <script src="http://hi.bdimg.com/static/qbase/js/qing/qing.js?v=058da7b0.js">
+    </script>
+    <script>
+      wpo.head = new Date * 1;
+    </script>
+    
+  </head>
+  
+  <body data-layershow="0">
+
+    <section class="mod-page-body">
+      <div class="mod-page-main wordwrap clearfix">
+        <div class="x-page-container">
+          <section class="mod-topspaceinfo mod-cs-header">
+            <div class="head-topbar">
+            </div>
+            <div class="container">
+              <h1>
+                <a class="space-name cs-header-spacename" href="{{ HOME_PATH }}">
+                  {{ site.title }}
+                </a>
+              </h1>
+              <p class="space-description cs-header-spacesummary">
+                {{ site.tagline }}
+              </p>
+            </div>
+            <div class="head-footer">
+            </div>
+          </section>
+
+        {{ content }}
+          
+        </div>
+      </div>
+    </section>
+    
+    <footer class="mod-footer mod-cs-footer">
+      <div class="clearfix hidden-box">
+      </div>
+      <div class="footer-box">
+        <div class="inner-box">
+          <a href="http://help.baidu.com/question?prod_en=hi" target="_blank">
+            帮助中心
+          </a>
+          <span>
+            &nbsp;|&nbsp;
+          </span>
+          <a href="http://tieba.baidu.com/p/1781683739" target="_blank">
+            空间客服
+          </a>
+          <span>
+            &nbsp;|&nbsp;
+          </span>
+          <a href="http://tousu.baidu.com/hi/add" target="_blank">
+            投诉中心
+          </a>
+          <span>
+            &nbsp;|&nbsp;
+          </span>
+          <a href="http://www.baidu.com/search/hi_contract.html" target="_blank">
+            空间协议
+          </a>
+        </div>
+        <div class="copy-box">
+          ©2013&nbsp;Baidu
+        </div>
+      </div>
+    </footer>
+    
+    <script src="http://hi.bdimg.com/static/qbase/js/mod/mod_foot.js?v=747a1d59.js">
+    </script>
+    <script>
+      qing.dom.ready(function() {
+        if (qVisitorInfo.loginStatus == 'activated') {
+          qext.stat.ns('m_20121012_loga_num');
+          qext.fn.setStoken();
+        }
+      });
+    </script>
+    <script>
+      qext.stat.ns('m_20120425_20001');
+    </script>
+    <script src="http://hi.bdimg.com/static/qcomment/js/qcmt_import.js?v=ac96f988.js">
+    </script>
+    <script src="http://hi.bdimg.com/static/qhome/js/home/20000/home.js?v=a1c419c1.js">
+    </script>
+    <div id="qBack2topBtn" style="bottom: 1%; margin-left: 280px; width: 57px; height: 57px; overflow: hidden; cursor: pointer; left: 50%; transition-property: opacity; position: fixed; opacity: 0; display: none;">
+      <div style="" class="back2top-ani-icon">
+        <div class="back2top-icon-bg">
+        </div>
+        <div class="back2top-icon-real">
+        </div>
+      </div>
+    </div>
+    <script>
+      wpo.tti = new Date * 1;
+    </script>
+    <script src="http://hi.baidu.com/cm/static/js/allsite.js?v=68594928.js?v=201306030840">
+    </script>
+    <script>
+      document.write(unescape("%3Cscript src='http://hm.baidu.com/h.js%3F8c869b543955d43e496c2efee5b55823' type='text/javascript'%3E%3C/script%3E"));
+      qext.stat.ns('m_20120713_qing_pv');
+    </script>
+    <script src="http://hm.baidu.com/h.js?8c869b543955d43e496c2efee5b55823"
+    type="text/javascript">
+    </script>
+  </body>
+  
+  <script type="text/javascript">
+    var wumiiPermaLink = "{{ BASE_PATH }}{{ page.url }}"; //请用代码生成文章永久的链接
+    var wumiiTitle = "{{page.title}}"; //请用代码生成文章标题
+    var wumiiTags = "{% for tag in page.tags %}'{{tag}}'{% if forloop.last == false %} ,{% endif %}{% endfor %}"; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+    var wumiiCategories = [{% for category in page.categories %}"{{category}}"{% if forloop.last == false %} ,{% endif %}{% endfor %}]; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+    var wumiiSitePrefix = "http://yishuo.org/";
+    var wumiiParams = "&num=6&mode=2&pf=JAVASCRIPT";
+</script>
+<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+<a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅相关文章插件，快速提升流量" style="border:0;padding:0;margin:0;" />
+</a>
+
+</html>

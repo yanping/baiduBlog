@@ -1,52 +1,160 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
+{% include JB/setup %}
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Blogtheme : 博客主题" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Blogtheme</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/yanping/blogTheme">View on GitHub</a>
-
-          <h1 id="project_title">Blogtheme</h1>
-          <h2 id="project_tagline">博客主题</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/yanping/blogTheme/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/yanping/blogTheme/tarball/master">Download this project as a tar.gz file</a>
+ <section class="grid-98 mod-blogpage">
+            <section class="mod-bloglist left">
+            
+            {% for post in paginator.posts  %}
+              <article class="mod-blogitem mod-item-text">
+                <div class="mod-real-text">
+                  <div class="box-postdate">
+                    <div class="q-day">
+                      {{ post.date | date: "%d" }}
+                    </div>
+                    <div class="q-month-year">
+                      {{ post.date | date: "%m/%Y" }}
+                    </div>
+                  </div>
+                </div>
+                <div class="mod-realcontent mod-cs-contentblock">
+                  <div class="cs-contentblock-bg">
+                  </div>
+                  <div class="item-head">   
+                    <a href="{{ BASE_PATH }}{{ post.url }}" class="a-incontent a-title cs-contentblock-hoverlink">
+                      {{ post.title }}
+                    </a>
+                  </div>
+                  <div class="item-content cs-contentblock-detailcontent">
+                    <div class="q-previewbox">
+                    </div>
+                    <div class="q-summary">
+                      {{ post.content | split: '<!-- more -->' | first }}
+                    </div>
+                  </div>
+                  <div class="item-foot clearfix">
+                    <span class="box-act" data-content-type="text">
+                      <a href="{{ BASE_PATH }}{{ post.url }}" class="a-act a-readall">
+                        阅读全文
+                      </a>
+                      <a href="/matrixspk/item/f3cd7e7297790e3f6e29f636#reply" class="a-act a-reply"
+                      hidefocus="">
+                        评论
+                        <span class="comment-count hide">
+                          (0)
+                        </span>
+                      </a>
+   
+                    </span>
+                    <span class="box-tag">
+                    </span>
+                  </div>
+                  <div class="blog-cmt-wraper">
+                  </div>
+                </div>
+              </article>
+              {% endfor %}
+              
+              <section style="display: block;" id="pagerBar" class="mod-blog-pagerbar mod-cs-pagebar">
+                <div class="mod-pagerbar">                  
+                    {% if paginator.next_page %}
+                    <a class="prev" href="{{ BASE_PATH }}/page{{paginator.next_page}}">&larr; Older</a>
+                    {% endif %}
+                      <a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">所有文章</a>
+                    {% if paginator.previous_page %}
+                      {% if paginator.page == 2 %}
+                      <a class="next" href="{{ BASE_PATH }}/">Newer &rarr;</a>
+                      {% else %}
+                      <a class="next" href="{{ BASE_PATH }}/page{{paginator.previous_page}}">Newer &rarr;</a>
+                      {% endif %}
+                    {% endif %}
+                </div>
+              </section>
+              
             </section>
-        </header>
-    </div>
+            <section class="mod-rightsidebar clearfix mod-cs-sidebar">
+              
+              <div class="mod-siderbar">
+                <div class="mod-userinfo">
+                  <div class="wraper-avatar" id="wraperAvatar">
+                    <div class="box-avatar">
+                      <img src="http://hiphotos.baidu.com/space/scrop=160;q=100/sign=626c87f5d53f8794d7a10f71a2263fc2/730e0cf3d7ca7bcbfa6fa362bf096b63f624a863.jpg"
+                      alt="dengyishuo" height="160px" width="160px">
+                    </div>
+                  </div>
+                  <div class="q-name clearfix">
+                    <a href="/matrixspk" class="a-normal cs-sidebar-link left">
+                      dengyishuo
+                    </a>
+                  </div>
+                  <div class="q-info">
+                    性别：
+                    <span>
+                      男
+                    </span>
+                  </div>
+                  <div class="q-residence">
+                    现居：
+                    <span>
+                      北京
+                    </span>
+                    <span>
+                      海淀区
+                    </span>
+                    <span>
+                    </span>
+                  </div>
+                  <div class="q-fans">
+                    粉丝：
+                    <a href="/matrixspk/qfriend/show/fans" class="cs-sidebar-link" target="_blank">
+                      <span>
+                        27
+                      </span>
+                    </a>
+                  </div>
+                  <div class="q-btn clearfix">
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a>欢迎使用</h3>
+                  </div>
+                </div>
 
-<p>所有主题都是在boostrap框架下修改的</p>
-      </section>
-    </div>
+                
+                <div class="mod-taglist">
+                  <ul class="q-taglist clearfix">
+                    <li class="q-tagitem">
+                      <span class="q-icon">
+                      </span>
+                    </li>
+                    <li class="q-tagitem">
+                      <a href="/matrixspk" class="a-tagitem cs-sidebar-hoverbglink">
+                        全部
+                      </a>
+                    </li>
+                    {% for tag in site.tags %}
+                    <li class="q-tagitem">
+                      <a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref" class="a-tagitem cs-sidebar-hoverbglink"
+                      title="{{ tag[0] }}">
+                        <nobr>
+                          {{ tag[0] }}
+                        </nobr>
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <section id="qFriendlyLinks">
+                  <div style="display: none;" class="mod-friendlyLinks">
+                    <h1 class="friendlyLinks-title">
+                      友情链接
+                    </h1>
+                    <div class="friendlyLinks-linkList">
+                      <ul class="friendlyLinks-linkListContainer">
+                      </ul>
+                    </div>
+                  </div>
+                </section>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Blogtheme maintained by <a href="https://github.com/yanping">yanping</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+              </div>
+            </section>
+            
+ </section>

@@ -1,0 +1,30 @@
+
+
+div.highlight pre {
+    background-color: transparent;
+    margin: 0;
+    padding: 10px;
+    border: none;
+}
+
+pre{
+      overflow: auto;    
+     _width: 95%;     /* IE6定宽 */
+    *padding-bottom: 14px;  /* XP下滚动条高度约14px */
+     overflow-x: auto;
+    *overflow-y: hidden;    /* 隐藏纵向滚动条 */
+}
+
+.mod-post-content {
+    border-right: 1px solid rgb(222, 222, 222);
+    border-width: 2px 1px 1px;
+    border-style: solid;
+    border-color: rgb(63, 167, 203) rgb(222, 222, 222) rgb(222, 222, 222);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    padding: 25px 20px;
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+}
